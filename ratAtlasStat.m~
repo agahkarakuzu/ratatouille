@@ -73,7 +73,7 @@ classdef  ratAtlasStat < handle
         
         function obj = parseData(obj)
             
-            obj.inspectData;
+            
             obj.Rat = struct('AD',[],'AED',[],'AVF',[],'GR',[],'MT',[],'MVF',[]);
             
             
@@ -81,13 +81,8 @@ classdef  ratAtlasStat < handle
                
                 
                 dat = ratAtlasStat.loadData(obj,obj.Sample{ii});
+                obj.Rat.AD = 
                 
-                obj.Rat(ii).AD = squeeze(dat(1,:,:));
-                obj.Rat(ii).AED = squeeze(dat(2,:,:));
-                obj.Rat(ii).AVF = squeeze(dat(3,:,:));
-                obj.Rat(ii).GR = squeeze(dat(4,:,:));
-                obj.Rat(ii).MT = squeeze(dat(5,:,:));
-                obj.Rat(ii).MVF = squeeze(dat(6,:,:));
               
                 
             end
